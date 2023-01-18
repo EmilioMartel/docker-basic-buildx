@@ -16,14 +16,14 @@ npm start
 
 ### CMD
 ```
-# docker buildx build \
-# --platform linux/amd64,linux/arm64 \
-# -t emmartel/cron-ticker --push .
+docker buildx build \
+--platform linux/amd64,linux/arm64 \
+-t emmartel/cron-ticker --push .
 ```
 ### Dockerfile
 ```
 # /app /usr /lib
 # FROM --platform=linux/amd64 node:19.2-alpine3.16
-# FROM node:19.2-alpine3.16
-FROM --platform=$BUILDPLATFORM node:19.2-alpine3.16
+# FROM --platform=$BUILDPLATFORM node:19.2-alpine3.16
+FROM node:19.2-alpine3.16
 ```
